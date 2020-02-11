@@ -20,7 +20,7 @@ deploy(){
 if [[ ${action} == "package" ]]; then
     package
 fi
-if [[${action} == 'deploy']]; then
+if [[ ${action} == 'deploy' ]]; then
     deploy
 fi
 
