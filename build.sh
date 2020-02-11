@@ -11,7 +11,8 @@ package(){
 
 deploy(){
   echo "开始发布"
-
+    docker-compose down
+    docker-compose up -d
   echo "结束发布"
 }
 
@@ -19,7 +20,9 @@ deploy(){
 if [[ ${action} == "package" ]]; then
     package
 fi
-
+if [[${action} == 'deploy']]; then
+    deploy
+fi
 
 
 

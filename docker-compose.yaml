@@ -1,0 +1,14 @@
+version: '3.4'
+
+
+#// $ docker run --name my-custom-nginx-container
+#  -v /host/path/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
+
+services:
+  nas-cloud-app:
+    image: nginx
+    volumes:
+      - `pwd`/build:/usr/share/nginx/html
+      - `pwd`/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - '9002:80'
